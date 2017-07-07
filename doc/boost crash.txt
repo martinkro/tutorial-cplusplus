@@ -1,0 +1,27 @@
+virtual void
+  do_remove_vertex( const node_t& node)
+  {
+    bgl_vertex_t v = bgl_nodes[node];
+    clear_vertex(v,graph_);
+    remove_vertex(v,graph_);
+  }
+  
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000040b87f in std::_List_base<boost::detail::sep_<void*, boost::property<boost::edge_weight_t, int, boost::no_property> >, std::allocator<boost::detail::sep_<void*, boost::property<boost::edge_weight_t, int, boost::no_property> > > >::_M_clear (this=0x0) at /usr/include/c++/4.4/bits/list.tcc:68
+68       _Node* __cur = static_cast<_Node*>(this->_M_impl._M_node._M_next);
+(gdb) bt
+#0  0x000000000040b87f in std::_List_base<boost::detail::sep_<void*, boost::property<boost::edge_weight_t, int, boost::no_property> >, std::allocator<boost::detail::sep_<void*, boost::property<boost::edge_weight_t, int, boost::no_property> > > >::_M_clear (this=0x0) at /usr/include/c++/4.4/bits/list.tcc:68
+#1  0x00000000004119d2 in std::list<boost::detail::sep_<void*, boost::property<boost::edge_weight_t, int, boost::no_property> >, std::allocator<boost::detail::sep_<void*, boost::property<boost::edge_weight_t, int, boost::no_property> > > >::clear (this=0x0) at /usr/include/c++/4.4/bits/stl_list.h:1132
+#2  0x000000000040fac4 in boost::clear_vertex<boost::detail::adj_list_gen<boost::adjacency_list<boost::listS, boost::listS, boost::directedS, boost::property<boost::vertex_name_t, std::string, boost::no_property>, boost::property<boost::edge_weight_t, int, boost::no_property>, boost::no_property, boost::listS>, boost::listS, boost::listS, boost::directedS, boost::property<boost::vertex_name_t, std::string, boost::no_property>, boost::property<boost::edge_weight_t, int, boost::no_property>, boost::no_property, boost::listS>::config> (u=0x0, g_=...) at boost_1_43_0/boost/graph/detail/adjacency_list.hpp:633
+#3  0x000000000040e7a5 in boost::detail::graph::mutate_graph_impl<boost::adjacency_list<boost::listS, boost::listS, boost::directedS, boost::property<boost::vertex_name_t, std::string, boost::no_property>, boost::property<boost::edge_weight_t, int, boost::no_property>, boost::no_property, boost::listS> >::do_remove_vertex (this=0x7fffffffe520, node=...)
+    at boost_1_43_0/boost/graph/graphviz.hpp:767
+#4  0x00007ffff7b6ab12 in boost::read_graphviz_detail::translate_results_to_graph (r=..., mg=0x7fffffffe520) at ../../../libs/graph/src/read_graphviz_new.cpp:782
+#5  0x00007ffff7b6b314 in boost::detail::graph::read_graphviz_new (str=..., mg=0x7fffffffe520) at ../../../libs/graph/src/read_graphviz_new.cpp:830
+#6  0x000000000040bc1f in boost::read_graphviz_new<boost::adjacency_list<boost::listS, boost::listS, boost::directedS, boost::property<boost::vertex_name_t, std::string, boost::no_property>, boost::property<boost::edge_weight_t, int, boost::no_property>, boost::no_property, boost::listS> > (str=..., graph=..., dp=..., node_id=...)
+    at boost_1_43_0/boost/graph/detail/read_graphviz_new.hpp:103
+#7  0x000000000040b243 in boost::read_graphviz<std::istream_iterator<char, char, std::char_traits<char>, long>, boost::adjacency_list<boost::listS, boost::listS, boost::directedS, boost::property<boost::vertex_name_t, std::string, boost::no_property>, boost::property<boost::edge_weight_t, int, boost::no_property>, boost::no_property, boost::listS> > (
+    user_first=..., user_last=..., graph=..., dp=..., node_id=...) at boost_1_43_0/boost/graph/graphviz.hpp:910
+#8  0x000000000040aa18 in boost::read_graphviz<boost::adjacency_list<boost::listS, boost::listS, boost::directedS, boost::property<boost::vertex_name_t, std::string, boost::no_property>, boost::property<boost::edge_weight_t, int, boost::no_property>, boost::no_property, boost::listS> > (in=..., graph=..., dp=..., node_id=...)
+    at boost_1_43_0/boost/graph/graphviz.hpp:922
+#9  0x00000000004086a9 in test_graph_read_write (filename=...) at graphviz.cpp:41
+#10 0x0000000000408814 in main () at graphviz.cpp:52
