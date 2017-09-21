@@ -1,0 +1,9 @@
+<?xml version="1" encoding="utf-8"?>
+<config>
+	<DEFAULT ct="79AE7107C94F2F1567642984A76BA665" probability="100" flag="1">
+		<file type=3 local="files/tss_base.dat" name="tss_base.dat" hash_type=1 probability="100" scale="1">
+			<A hash="37AF74FC"/>
+			<B hash="1A998875"/>
+		</file>
+	</DEFAULT>
+</config>
