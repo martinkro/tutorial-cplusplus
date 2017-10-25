@@ -289,3 +289,6 @@ __pycache__/
 
 [Bb]uild/
 *.exe
+
+bin/
+intermediate/
