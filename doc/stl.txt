@@ -1,0 +1,23 @@
+在STL中提到”大“、”小“的概念的时候，以下三个说法是等价的：
+（1）x 比 y 小
+（2）表达式”x < y"为真
+（3）y 比 x 大
+一定要注意，“y 比 x 大” 意味着 “ ”x < y"为真 ”， 而不是“ y > x 为真” 。 “y > x" 结果到底如何不重要，甚至” y > x” 是没有定义的都没关系
+
+
+"x 最大"   == " 找不到比x 大的元素” ，而不是“ x 比 其他元素都大”
+
+严格弱序
+
+偏序
+全序
+
+http://www.cnblogs.com/walkerlala/p/5561339.html
+
+A strict weak ordering is a binary relation < on a set S that is a strict partial order (a transitive relation that is irreflexive, or equivalently,[5] that is asymmetric) in which the relation "neither a < b nor b < a" is transitive.[1] Therefore, a strict weak ordering has the following properties:
+
+For all x in S, it is not the case that x < x (irreflexivity).
+For all x, y in S, if x < y then it is not the case that y < x (asymmetry).
+For all x, y, z in S, if x < y and y < z then x < z (transitivity).
+For all x, y, z in S, if x is incomparable with y (neither x < y nor y < x hold), and y is incomparable with z, then x is incomparable with z (transitivity of incomparability).
+This list of properties is somewhat redundant, as asymmetry follows readily from irreflexivity and transitivity.
