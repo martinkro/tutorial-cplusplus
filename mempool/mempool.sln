@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BitMappedMemoryPool", "BitMappedMemoryPool\BitMappedMemoryPool.vcxproj", "{438394A4-9C4B-473E-BBDB-20AC6FDDF799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Debug|x64.ActiveCfg = Debug|x64
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Debug|x64.Build.0 = Debug|x64
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Debug|x86.ActiveCfg = Debug|Win32
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Debug|x86.Build.0 = Debug|Win32
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Release|x64.ActiveCfg = Release|x64
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Release|x64.Build.0 = Release|x64
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Release|x86.ActiveCfg = Release|Win32
+		{438394A4-9C4B-473E-BBDB-20AC6FDDF799}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A69CE4EE-32D2-4D93-9811-E18E311580AE}
+	EndGlobalSection
+EndGlobal
